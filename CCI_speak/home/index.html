@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Store Rock in Rio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: white;
+        }
+        header {
+            position: relative;
+            background-color: #111010;
+            padding: 7cqmax;
+            text-align: center;
+        }
+        header img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 100px; /* Ajuste conforme necessário */
+            z-index: 1;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .banner {
+            text-align: center;
+            background: url('https://rockinrio.com/banner.jpg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .banner h2 {
+            font-size: 3em;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+        }
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .product {
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            max-width: 300px;
+        }
+        .product img {
+            width: 100%;
+        }
+        .product h3 {
+            text-align: center;
+            font-size: 1.5em;
+            padding: 10px;
+        }
+        .product p {
+            text-align: center;
+            padding: 0 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #e60000;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo2.webp" alt="Logo Rock in Rio" height="770x" width="50%">
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About us</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="banner">
+        <h2>Cool styles</h2>
+    </div>
+
+    <section class="products">
+        <div class="product">
+            <img src="camisa1.webp" alt="Camiseta Rock in Rio">
+            <h3>T-shirt Rock in Rio</h3>
+            <p>R$ 99,90</p>
+        </div>
+        <div class="product">
+            <img src="banda.webp" alt="Camiseta Banda">
+            <h3>T-shirt Paralamas do Sucesso</h3>
+            <p>R$ 89,90</p>
+        </div>
+        <div class="product">
+            <img src="jaqueta.webp" alt="Jaqueta de Couro">
+            <h3>Leather Jacket</h3>
+            <p>R$ 299,90</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Official Store Rock in Rio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

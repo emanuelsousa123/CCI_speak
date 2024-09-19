@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Rock in Rio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: white;
+        }
+        header {
+            position: relative;
+            background-color: #111010;
+            padding: 7cqmax;
+            text-align: center;
+        }
+        header img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 100px; /* Ajuste conforme necessário */
+            z-index: 1;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+        .product-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .product-image {
+            max-width: 45%;
+        }
+        .product-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product-info {
+            max-width: 50%;
+            padding: 20px;
+        }
+        .product-info h2 {
+            margin: 0 0 20px;
+        }
+        .product-info p {
+            font-size: 1.2em;
+        }
+        .product-info span {
+            color: #e60000;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin: 20px 0 10px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #e60000;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #cc0000;
+        }
+        .message {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e60000;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #e60000;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo2.webp" alt="Logo Rock in Rio" height="770x" width="50%">
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About us</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>Your Cart</h2>
+
+        <div class="product-details">
+            <!-- Imagem do produto -->
+            <div class="product-image">
+                <img src="camisa1.webp" alt="T-shirt Rock in Rio">
+            </div>
+
+            <!-- Informações do produto -->
+            <div class="product-info">
+                <h2>T-shirt Rock in Rio</h2>
+                <p>Size: M</p>
+                <p>Color: Black</p>
+                <p>Cost: <span>R$ 99,90</span></p>
+
+                <!-- Quantidade e botão de compra -->
+                <form id="form-compra">
+                    <label for="quantidade">Quantity:</label>
+                    <input type="number" id="quantidade" name="quantidade" value="1" min="1" required>
+
+                    <input type="submit" value="Proceed to Purchase">
+                </form>
+                
+                <!-- Mensagem de Compra Concluída -->
+                <div class="message" id="mensagem-concluida">
+                    Purchase Completed!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;  2024 Official Store Rock in Rio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Captura o formulário e o div da mensagem
+        const formCompra = document.getElementById('form-compra');
+        const mensagemConcluida = document.getElementById('mensagem-concluida');
+
+        // Adiciona um evento de submit ao formulário
+        formCompra.addEventListener('submit', function(event) {
+            // Impede o envio do formulário
+            event.preventDefault();
+
+            // Exibe a mensagem de compra concluída
+            mensagemConcluida.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
